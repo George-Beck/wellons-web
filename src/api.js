@@ -3,7 +3,7 @@ import jwt_decode from 'jwt-decode'
 
 import {fireEvent} from './util.js'
 
-export const __APIHOST__ = 'http://localhost:5555'
+export const __APIHOST__ = import.meta.env.VITE_API_URL || 'http://localhost:5555'
 
 export function doLogout() {
   localStorage.removeItem('access_token')
